@@ -1,0 +1,15 @@
+{
+ "model": "gemma-4-31b-it",
+ "tiles": 977,
+ "unparsed": 0,
+ "called_SSL_share": 0.896,
+ "SSL_caught": 0.964,
+ "HP_cleared": 0.144,
+ "balanced_accuracy": 0.554,
+ "accuracy": 0.446,
+ "for_comparison": {
+  "app_panel_test_balanced_accuracy": 0.888,
+  "chance": 0.5
+ },
+ "seconds": 781
+}
