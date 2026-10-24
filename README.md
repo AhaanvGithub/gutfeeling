@@ -46,18 +46,10 @@ Full tables, the comparison with every published MHIST result, and how each prot
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A[Hotkey over any viewer] --> B[Screen capture]
-    B --> C[Scale bar read by OCR<br/>field sized to 448 um]
-    C --> D[ConvNeXt-B + MUSK ensemble<br/>calibrated call]
-    D --> E[Evidence map]
-    D --> F[U-Net crypts]
-    D --> G[Similar cases]
-    D --> H[Unfamiliar-input check]
-    E & F & H --> I[LLM literature reading<br/>RAG + guardrails]
-    D & E & F & G & I --> J[Results panel]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/pipeline_dark.svg">
+  <img alt="Pipeline: hotkey snip, field sized by scale bar, ConvNeXt-B + MUSK ensemble call, evidence (map, crypts, similar cases, unfamiliar check), literature reading, results panel" src="docs/img/pipeline_light.svg" width="100%">
+</picture>
 
 - **App:** Electron (snip screen, results panel) talking to a Python FastAPI service on port 8765, which streams results as each stage finishes.
 - **Models:** ConvNeXt-Base (88M parameters, fully fine-tuned) and MUSK (305M; LoRA rank 8 on all 24 layers). Training used 5-fold cross-validation, soft labels (share of the 7 pathologists who said SSL), class balancing and Platt calibration. Every choice was made on training data; the test split was scored once.

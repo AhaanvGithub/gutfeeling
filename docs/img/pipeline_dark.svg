@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="450" viewBox="0 0 1260 450" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1260" height="450" fill="#0d1117"/>
+  <text x="104" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">1  SNIP</text>
+  <text x="318" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">2  FIELD</text>
+  <text x="532" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">3  CALL</text>
+  <rect x="8.0" y="166.0" width="192" height="132" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="104" y="208.075" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Hotkey</text>
+  <text x="104" y="232.975" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">over any slide viewer</text>
+  <text x="104" y="256.9" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">true-colour capture</text>
+  <rect x="222.0" y="166.0" width="192" height="132" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="318" y="208.075" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Field</text>
+  <text x="318" y="232.975" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">scale bar read by OCR</text>
+  <text x="318" y="256.9" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">sized to 448 µm</text>
+  <rect x="436.0" y="166.0" width="192" height="132" rx="12" fill="#0d2347" stroke="#4493f8" stroke-width="1.4"/>
+  <text x="532" y="208.075" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Ensemble</text>
+  <text x="532" y="232.975" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">ConvNeXt-B + MUSK</text>
+  <text x="532" y="256.9" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">calibrated call, ~2 s</text>
+  <line x1="200.0" y1="232" x2="213.0" y2="232" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M222.0,232 l-10,-5.5 v11 z" fill="#6e7681"/>
+  <line x1="414.0" y1="232" x2="427.0" y2="232" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M436.0,232 l-10,-5.5 v11 z" fill="#6e7681"/>
+  <rect x="647.0" y="50.0" width="246" height="363.0" rx="16" fill="#10151c" stroke="#30363d" stroke-width="1.2" stroke-dasharray="5 5"/>
+  <text x="770" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">4  EVIDENCE</text>
+  <rect x="663.0" y="66.0" width="214" height="76" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="770" y="93.125" font-size="18.5" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Evidence map</text>
+  <text x="770" y="114.7" font-size="15" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">occlusion, 16 → 128 grid</text>
+  <rect x="663.0" y="151.0" width="214" height="76" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="770" y="178.125" font-size="18.5" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Crypts</text>
+  <text x="770" y="199.7" font-size="15" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">U-Net, measured in µm</text>
+  <rect x="663.0" y="236.0" width="214" height="76" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="770" y="263.125" font-size="18.5" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Similar cases</text>
+  <text x="770" y="284.7" font-size="15" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">454 fields, other labs</text>
+  <rect x="663.0" y="321.0" width="214" height="76" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="770" y="348.125" font-size="18.5" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Unfamiliar check</text>
+  <text x="770" y="369.7" font-size="15" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">distance to training set</text>
+  <line x1="628.0" y1="232" x2="638.0" y2="232" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M647.0,232 l-10,-5.5 v11 z" fill="#6e7681"/>
+  <text x="1010" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">5  EXPLAIN</text>
+  <text x="1190" y="30" font-size="15" fill="#9198a1" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing="1.6">6  SHOW</text>
+  <rect x="914.0" y="166.0" width="192" height="132" rx="12" fill="#24123f" stroke="#ab7df8" stroke-width="1.4"/>
+  <text x="1010" y="208.075" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Literature</text>
+  <text x="1010" y="232.975" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">Gemma-4 31B + RAG</text>
+  <text x="1010" y="256.9" font-size="16.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">cited, never overrules</text>
+  <line x1="893.0" y1="232" x2="905.0" y2="232" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M914.0,232 l-10,-5.5 v11 z" fill="#6e7681"/>
+  <rect x="1128.0" y="50.0" width="124" height="363.0" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1.4"/>
+  <text x="1190" y="96.0" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">Results</text>
+  <text x="1190" y="124.0" font-size="22" fill="#e6edf3" font-weight="600" text-anchor="middle" dominant-baseline="middle">panel</text>
+  <text x="1190" y="202" font-size="15.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">call</text>
+  <text x="1190" y="235" font-size="15.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">evidence map</text>
+  <text x="1190" y="268" font-size="15.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">crypts</text>
+  <text x="1190" y="301" font-size="15.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">similar cases</text>
+  <text x="1190" y="334" font-size="15.5" fill="#9198a1" font-weight="400" text-anchor="middle" dominant-baseline="middle">reading</text>
+  <line x1="1106.0" y1="232" x2="1119.0" y2="232" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M1128.0,232 l-10,-5.5 v11 z" fill="#6e7681"/>
+  <line x1="893.0" y1="359" x2="1119.0" y2="359" stroke="#6e7681" stroke-width="1.8"/>
+  <path d="M1128.0,359 l-10,-5.5 v11 z" fill="#6e7681"/>
+</svg>
