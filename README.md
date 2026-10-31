@@ -53,7 +53,7 @@ Full tables, the comparison with every published MHIST result, and how each prot
 
 - **App:** Electron (snip screen, results panel) talking to a Python FastAPI service on port 8765, which streams results as each stage finishes.
 - **Models:** ConvNeXt-Base (88M parameters, fully fine-tuned) and MUSK (305M; LoRA rank 8 on all 24 layers). Training used 5-fold cross-validation, soft labels (share of the 7 pathologists who said SSL), class balancing and Platt calibration. Every choice was made on training data; the test split was scored once.
-- **LLM:** Gemma-4 31B with retrieval over a curated literature library. Code checks every answer for invented citations, overclaiming and evidence that wasn't measured; confidence is capped at 92%, and the cleanest of 3 runs is shown. Prompt changes cut these rule breaks from 1.13 to 0.80 per answer, 29% fewer (5 test fields x 3 runs; [details](docs/results/literature_reading_eval.md)).
+- **LLM:** Gemma-4 31B with retrieval over a curated literature library. Code checks every answer for invented citations, overclaiming and evidence that wasn't measured; confidence is capped at 92%, and the cleanest of 3 runs is shown. Prompt changes cut these rule breaks from 1.13 to 0.80 per answer, 29% fewer (5 test fields x 3 runs; [details](docs/results/literature_reading_eval.md)). The literature reading arrives about 8 s after the call (measured locally on an NVIDIA RTX 5060 Laptop GPU; the LLM itself runs on NCSA Lumen).
 
 More detail:
 - [How it works](docs/how_it_works.md): each stage, and the design decisions behind it
@@ -104,6 +104,13 @@ Models and data are not included; see [reproducing](docs/reproducing.md) for acc
 | [`research/`](research) | Training and evaluation scripts |
 | [`docs/`](docs) | Detail pages and [result files](docs/results) |
 | `papers/` | Literature library. `papers/library.json` is not distributed; build it from your own OpenEvidence answers with `research/build_library.py` |
+
+## Ongoing work
+
+- Trying larger backbones to improve SSL vs HP accuracy.
+- Fixing SSL under-calling on other labs' slides (the outside-lab gap noted in Limitations).
+- Improving the app UI.
+- Getting feedback from more practising pathologists.
 
 ## License
 
