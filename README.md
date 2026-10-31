@@ -23,12 +23,12 @@ On the 977 official MHIST test images, scored once with the exact models the app
 | | gutfeeling | Best published result that never used the test split (Virchow2, linear probe) | General vision LLM (Gemma-4 31B) |
 |---|---|---|---|
 | **Balanced accuracy** | **0.888** | 0.848 | 0.554 |
-| AUC | 0.956 | | |
-| SSL caught / HP cleared | 89.2% / 88.5% | | 96.4% / 14.4% |
-| Calibration error | 2.2% | 0.6% | |
+| AUC | 0.956 | not reported | n/a (no scores) |
+| SSL caught / HP cleared | 89.2% / 88.5% | not reported | 96.4% / 14.4% |
+| Calibration error | 2.2% | 0.6% | n/a (no scores) |
 
-- **The ceiling:** a single pathologist matches the 7-pathologist majority 83% of the time. About 1 in 6 test tiles is a 4-3 split, which caps any model at roughly 89-92% agreement, so gutfeeling's 0.887 accuracy is at that ceiling.
-- **The app matches the reported result:** the test images sent through the app as screen snips give 0.886.
+- **The ceiling:** a single pathologist matches the 7-pathologist majority 83% of the time. About 1 in 6 test tiles is a 4-3 split, which caps any model at roughly 89-92% agreement, so gutfeeling's plain accuracy (0.887, vs 0.888 balanced) is at that ceiling.
+- **The app matches the reported result:** the test images sent through the app as screen snips give 0.886 balanced accuracy, against 0.888 offline.
 - **Outside data:** gutfeeling was never trained on other hospitals' slides. On them it keeps HP right (99.6% on UniToPatho) but under-calls SSL ([other labs](docs/other_labs.md)).
 
 Full tables, the comparison with every published MHIST result, and how each protocol differs are in [results](docs/results.md).
@@ -53,7 +53,7 @@ Full tables, the comparison with every published MHIST result, and how each prot
 
 - **App:** Electron (snip screen, results panel) talking to a Python FastAPI service on port 8765, which streams results as each stage finishes.
 - **Models:** ConvNeXt-Base (88M parameters, fully fine-tuned) and MUSK (305M; LoRA rank 8 on all 24 layers). Training used 5-fold cross-validation, soft labels (share of the 7 pathologists who said SSL), class balancing and Platt calibration. Every choice was made on training data; the test split was scored once.
-- **LLM:** Gemma-4 31B with retrieval over a curated literature library. Code checks every answer for invented citations, overclaiming and evidence that wasn't measured; confidence is capped at 92%, and the cleanest of 3 runs is shown.
+- **LLM:** Gemma-4 31B with retrieval over a curated literature library. Code checks every answer for invented citations, overclaiming and evidence that wasn't measured; confidence is capped at 92%, and the cleanest of 3 runs is shown. Prompt changes cut these rule breaks from 1.13 to 0.80 per answer, 29% fewer (5 test fields x 3 runs; [details](docs/results/literature_reading_eval.md)).
 
 More detail:
 - [How it works](docs/how_it_works.md): each stage, and the design decisions behind it
@@ -93,7 +93,7 @@ Models and data are not included; see [reproducing](docs/reproducing.md) for acc
 - **One lab:** trained on MHIST only (Dartmouth). On other labs' slides it keeps HP right but under-calls SSL.
 - **Single fields:** it reads one field at a time, not whole slides or clinical context such as polyp size or location.
 - **Consensus, not truth:** the labels are a consensus of pathologists. Molecular markers such as BRAF would give a firmer reference, but no public SSL slides have them yet.
-- **Not validated in practice:** no study yet of pathologists using it. It is a research tool, not a medical device.
+- **Not validated in practice:** shown to a practising pathologist in an informal demo, but there is no formal study yet of pathologists using it. It is a research tool, not a medical device.
 
 ## Repository
 
